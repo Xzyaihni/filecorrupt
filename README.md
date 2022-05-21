@@ -1,12 +1,12 @@
-# terrariacolorer
-just creates tagged text with pretty colors
+# filecorrupt thing
+creates a copy of a corrupted file in the program's directory
 
 # how 2 build
-needs wxwidgets and lua
+needs wxwidgets
 
 ```
-git clone https://github.com/Xzyaihni/terrariacolorer
-cd terrariacolorer
+git clone https://github.com/Xzyaihni/filecorrupt
+cd filecorrupt
 mkdir bin
 cd bin
 cmake ..
