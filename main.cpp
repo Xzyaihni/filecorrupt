@@ -142,8 +142,11 @@ void main_frame::random_checkbox(wxCommandEvent& event)
 
 void main_frame::filepath_choice(wxFileCtrlEvent& event)
 {
-    _corrupt_filepath = std::filesystem::path(event.GetDirectory().wc_str())
-        /std::filesystem::path(event.GetFile().wc_str());
+    const std::string dir = std::string(event.GetDirectory().utf8_str().data());
+    const std::string file = std::string(event.GetFile().utf8_str().data());
+
+    _corrupt_filepath = std::filesystem::path(dir)
+        /std::filesystem::path(file);
 }
 
 void main_frame::corrupt_button(wxCommandEvent& event)
